@@ -1,4 +1,4 @@
-# Simple Snake game in Python 3
+# Screen Snake game in Python 3 using turtle
 
 import turtle
 import time
