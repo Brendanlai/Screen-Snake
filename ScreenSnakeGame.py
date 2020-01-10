@@ -6,10 +6,6 @@ import random
 
 delay = 0.1
 
-# Score
-score = 0
-high_score = 0
-
 # Set up screen
 wn = turtle.Screen()
 wn.title("Screen Snake by Brendan")
@@ -38,6 +34,9 @@ food.goto(0, 100)
 segments = []
 
 # Score
+score = 0
+high_score = 0
+
 pen = turtle.Turtle()
 pen.speed(0)
 pen.shape("square")
