@@ -4,7 +4,6 @@ import turtle
 import time
 import random
 
-
 delay = 0.1
 
 # Score
@@ -85,7 +84,7 @@ def go_left():
 
 
 def restart_game():
-    time.sleep(1)
+    time.sleep(1.5)
     # Pseudo way to delete the segments
     for seg in segments:
         seg.goto(1000, 1000)
@@ -148,7 +147,7 @@ while True:
         pen.clear()
         pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
         restart_game()
-
+    
     move()
 
     # Body collision check
@@ -158,7 +157,7 @@ while True:
             pen.clear()
             pen.write("Score: {}  High Score: {}".format(score, high_score), align="center",font=("Courier", 24, "normal"))
             restart_game()
-
+    
     time.sleep(delay)
 
 wn.mainloop()
