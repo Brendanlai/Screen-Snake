@@ -61,7 +61,7 @@ def move():
     if head.direction == "left":
         head.setx(head.xcor() - 20)
 
-
+# Movement commands (ensure snake cannot do 180deg turn)
 def go_up():
     if head.direction != "down":
         head.direction = "up"
@@ -81,10 +81,10 @@ def go_left():
     if head.direction != "right":
         head.direction = "left"
 
-
+# Restart game when snake either collides with itself or body
 def restart_game():
     time.sleep(1.5)
-    # Pseudo way to delete the segments
+    # Pseudo way to delete the segments 
     for seg in segments:
         seg.goto(1000, 1000)
 
@@ -104,7 +104,7 @@ while True:
     wn.update()
 
     # Check for collision with the food
-    if head.distance(food) < 20:  # each turtle is 20x20 pixels
+    if head.distance(food) < 20:  # each turtle (food) is 20x20 pixels
         # Move food to random location
         x = random.randint(-290, 290)
         y = random.randint(-290, 290)
